@@ -1,0 +1,849 @@
+2018-07-13 03:36:51.0303|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-07-13 03:36:51.1611|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-07-13 03:36:51.1871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?', @p6='?', @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?', @p11='?', @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 50), @p15='?', @p16='?', @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (Size = 50), @p20='?', @p21='?', @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?' (Size = 50), @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29);
+2018-07-13 03:36:51.1871|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p30='?', @p31='?', @p32='?' (Size = 500), @p33='?' (Size = 100), @p34='?', @p35='?', @p36='?' (Size = 500), @p37='?' (Size = 100), @p38='?', @p39='?', @p40='?' (Size = 500), @p41='?' (Size = 100), @p42='?', @p43='?', @p44='?' (Size = 500), @p45='?' (Size = 100), @p46='?', @p47='?', @p48='?' (Size = 500), @p49='?' (Size = 100), @p50='?', @p51='?', @p52='?' (Size = 500), @p53='?' (Size = 100), @p54='?', @p55='?', @p56='?' (Size = 500), @p57='?' (Size = 100), @p58='?', @p59='?', @p60='?' (Size = 500), @p61='?' (Size = 100), @p62='?', @p63='?', @p64='?' (Size = 500), @p65='?' (Size = 100), @p66='?', @p67='?', @p68='?' (Size = 500), @p69='?' (Size = 100), @p70='?', @p71='?', @p72='?' (Size = 500), @p73='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p30, @p31, @p32, @p33),
+(@p34, @p35, @p36, @p37),
+(@p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45),
+(@p46, @p47, @p48, @p49),
+(@p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61),
+(@p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69),
+(@p70, @p71, @p72, @p73);
+2018-07-13 03:36:51.5566|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:36:51.6076|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 60.8696ms 404 
+2018-07-13 03:37:05.0395|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  
+2018-07-13 03:37:05.0765|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:37:05.0782|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:37:05.0782|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:37:05.0782|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:37:05.0782|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:37:05.1071|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.GetBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:37:05.1332|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:37:05.1432|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:37:05.1604|INFO|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+2018-07-13 03:37:05.1962|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.GetBookForAuthor (Library.API) in 120.7769ms
+2018-07-13 03:37:05.1962|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 158.4125ms 200 application/json; charset=utf-8
+2018-07-13 03:37:11.9329|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:37:11.9329|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:37:11.9371|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:37:11.9371|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Books]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2018-07-13 03:37:11.9528|INFO|Library.API.Controllers.BooksController|Deleted book 70a1f9b9-0a37-4c1a-99b1-c7709fc64167 for author 25320c5e-f58a-4b1f-b63a-8ee07a840bdf.
+2018-07-13 03:37:11.9528|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2018-07-13 03:37:11.9528|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 22.7277ms
+2018-07-13 03:37:11.9528|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 26.023ms 204 
+2018-07-13 03:38:01.3859|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-07-13 03:38:01.5911|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (44ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-07-13 03:38:01.6561|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?', @p6='?', @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?', @p11='?', @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 50), @p15='?', @p16='?', @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (Size = 50), @p20='?', @p21='?', @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?' (Size = 50), @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29);
+2018-07-13 03:38:01.7053|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@p30='?', @p31='?', @p32='?' (Size = 500), @p33='?' (Size = 100), @p34='?', @p35='?', @p36='?' (Size = 500), @p37='?' (Size = 100), @p38='?', @p39='?', @p40='?' (Size = 500), @p41='?' (Size = 100), @p42='?', @p43='?', @p44='?' (Size = 500), @p45='?' (Size = 100), @p46='?', @p47='?', @p48='?' (Size = 500), @p49='?' (Size = 100), @p50='?', @p51='?', @p52='?' (Size = 500), @p53='?' (Size = 100), @p54='?', @p55='?', @p56='?' (Size = 500), @p57='?' (Size = 100), @p58='?', @p59='?', @p60='?' (Size = 500), @p61='?' (Size = 100), @p62='?', @p63='?', @p64='?' (Size = 500), @p65='?' (Size = 100), @p66='?', @p67='?', @p68='?' (Size = 500), @p69='?' (Size = 100), @p70='?', @p71='?', @p72='?' (Size = 500), @p73='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p30, @p31, @p32, @p33),
+(@p34, @p35, @p36, @p37),
+(@p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45),
+(@p46, @p47, @p48, @p49),
+(@p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61),
+(@p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69),
+(@p70, @p71, @p72, @p73);
+2018-07-13 03:38:02.0879|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:38:02.0879|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:6058/  0
+2018-07-13 03:38:02.1450|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 99.9637ms 200 
+2018-07-13 03:38:02.2447|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 199.2523ms 404 
+2018-07-13 03:38:45.1665|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:38:45.2724|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:38:45.3301|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:38:45.4000|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:38:45.4453|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:38:45.4715|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:38:45.5760|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:38:45.6489|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:38:45.7257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (33ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:38:45.7917|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (36ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Books]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2018-07-13 03:38:45.8227|INFO|Library.API.Controllers.BooksController|Deleted book 70a1f9b9-0a37-4c1a-99b1-c7709fc64167 for author 25320c5e-f58a-4b1f-b63a-8ee07a840bdf.
+2018-07-13 03:38:45.8632|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2018-07-13 03:38:45.9022|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 638.3022ms
+2018-07-13 03:38:45.9161|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 766.1062ms 204 
+2018-07-13 03:41:02.4376|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\stanislavt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-07-13 03:41:02.6437|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:41:03.4027|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:41:03.4070|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:41:03.4070|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:41:03.4070|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:41:03.6865|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-07-13 03:41:03.6865|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-07-13 03:41:03.7609|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-07-13 03:41:03.7609|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-07-13 03:41:03.7858|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?', @p6='?', @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?', @p11='?', @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 50), @p15='?', @p16='?', @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (Size = 50), @p20='?', @p21='?', @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?' (Size = 50), @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29);
+2018-07-13 03:41:03.7858|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?', @p6='?', @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?', @p11='?', @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 50), @p15='?', @p16='?', @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (Size = 50), @p20='?', @p21='?', @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?' (Size = 50), @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29);
+2018-07-13 03:41:03.7858|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p30='?', @p31='?', @p32='?' (Size = 500), @p33='?' (Size = 100), @p34='?', @p35='?', @p36='?' (Size = 500), @p37='?' (Size = 100), @p38='?', @p39='?', @p40='?' (Size = 500), @p41='?' (Size = 100), @p42='?', @p43='?', @p44='?' (Size = 500), @p45='?' (Size = 100), @p46='?', @p47='?', @p48='?' (Size = 500), @p49='?' (Size = 100), @p50='?', @p51='?', @p52='?' (Size = 500), @p53='?' (Size = 100), @p54='?', @p55='?', @p56='?' (Size = 500), @p57='?' (Size = 100), @p58='?', @p59='?', @p60='?' (Size = 500), @p61='?' (Size = 100), @p62='?', @p63='?', @p64='?' (Size = 500), @p65='?' (Size = 100), @p66='?', @p67='?', @p68='?' (Size = 500), @p69='?' (Size = 100), @p70='?', @p71='?', @p72='?' (Size = 500), @p73='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p30, @p31, @p32, @p33),
+(@p34, @p35, @p36, @p37),
+(@p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45),
+(@p46, @p47, @p48, @p49),
+(@p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61),
+(@p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69),
+(@p70, @p71, @p72, @p73);
+2018-07-13 03:41:03.7858|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@p30='?', @p31='?', @p32='?' (Size = 500), @p33='?' (Size = 100), @p34='?', @p35='?', @p36='?' (Size = 500), @p37='?' (Size = 100), @p38='?', @p39='?', @p40='?' (Size = 500), @p41='?' (Size = 100), @p42='?', @p43='?', @p44='?' (Size = 500), @p45='?' (Size = 100), @p46='?', @p47='?', @p48='?' (Size = 500), @p49='?' (Size = 100), @p50='?', @p51='?', @p52='?' (Size = 500), @p53='?' (Size = 100), @p54='?', @p55='?', @p56='?' (Size = 500), @p57='?' (Size = 100), @p58='?', @p59='?', @p60='?' (Size = 500), @p61='?' (Size = 100), @p62='?', @p63='?', @p64='?' (Size = 500), @p65='?' (Size = 100), @p66='?', @p67='?', @p68='?' (Size = 500), @p69='?' (Size = 100), @p70='?', @p71='?', @p72='?' (Size = 500), @p73='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p30, @p31, @p32, @p33),
+(@p34, @p35, @p36, @p37),
+(@p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45),
+(@p46, @p47, @p48, @p49),
+(@p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61),
+(@p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69),
+(@p70, @p71, @p72, @p73);
+2018-07-13 03:41:04.0095|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:41:04.0162|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:41:04.0642|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 58.8084ms 404 
+2018-07-13 03:41:04.0642|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 58.8084ms 404 
+2018-07-13 03:41:15.4943|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:41:15.4943|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:41:15.5425|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:41:15.5425|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:41:15.5425|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:41:15.5463|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:41:15.5714|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:41:15.5714|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:41:15.5986|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:41:15.5986|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:41:15.6107|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:41:15.6107|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:41:15.6107|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Books]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2018-07-13 03:41:15.6107|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Books]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2018-07-13 03:41:15.6242|INFO|Library.API.Controllers.BooksController|Deleted book 70a1f9b9-0a37-4c1a-99b1-c7709fc64167 for author 25320c5e-f58a-4b1f-b63a-8ee07a840bdf.
+2018-07-13 03:41:15.6242|INFO|Library.API.Controllers.BooksController|Deleted book 70a1f9b9-0a37-4c1a-99b1-c7709fc64167 for author 25320c5e-f58a-4b1f-b63a-8ee07a840bdf.
+2018-07-13 03:41:15.6242|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2018-07-13 03:41:15.6242|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2018-07-13 03:41:15.6242|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 92.1127ms
+2018-07-13 03:41:15.6242|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 92.1127ms
+2018-07-13 03:41:15.6242|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 143.4034ms 204 
+2018-07-13 03:41:15.6242|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 143.4034ms 204 
+2018-07-13 03:42:12.5383|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:42:12.5383|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:42:12.5383|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.0869ms 404 
+2018-07-13 03:42:12.5383|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.0869ms 404 
+2018-07-13 03:42:25.6839|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:42:25.6839|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:42:25.6839|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.7219ms 404 
+2018-07-13 03:42:25.6864|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.7219ms 404 
+2018-07-13 03:42:34.4842|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:34.4842|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:34.4842|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:34.4842|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:34.4842|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:34.4995|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:34.4995|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:34.4995|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 14.5535ms
+2018-07-13 03:42:34.4995|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 14.5535ms
+2018-07-13 03:42:34.4995|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 17.8776ms 404 
+2018-07-13 03:42:34.4995|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 17.8776ms 404 
+2018-07-13 03:42:35.9848|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:35.9848|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:35.9848|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:35.9848|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:35.9848|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:35.9997|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:35.9997|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:35.9997|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 14.3507ms
+2018-07-13 03:42:35.9997|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 14.3507ms
+2018-07-13 03:42:35.9997|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 17.179ms 404 
+2018-07-13 03:42:35.9997|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 17.179ms 404 
+2018-07-13 03:42:36.2285|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:36.2285|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:36.2285|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:36.2285|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:36.2285|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.2285|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:36.2344|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 14.0754ms
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 14.0754ms
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.8797ms 404 
+2018-07-13 03:42:36.2344|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.8797ms 404 
+2018-07-13 03:42:36.6149|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:36.6149|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:36.6149|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:36.6149|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:36.6149|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:36.6257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:36.6257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:36.6257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:36.6257|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:36.6257|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:36.6257|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:36.6257|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 13.5724ms
+2018-07-13 03:42:36.6257|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 13.5724ms
+2018-07-13 03:42:36.6257|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.1916ms 404 
+2018-07-13 03:42:36.6257|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.1916ms 404 
+2018-07-13 03:42:37.1445|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:37.1445|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:42:37.1445|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:37.1445|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:37.1445|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:42:37.1561|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:37.1561|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:42:37.1561|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:37.1561|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-13 03:42:37.1561|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 12.1575ms
+2018-07-13 03:42:37.1561|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 12.1575ms
+2018-07-13 03:42:37.1561|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 14.771ms 404 
+2018-07-13 03:42:37.1561|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 14.771ms 404 
+2018-07-13 03:43:15.7047|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\stanislavt\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2018-07-13 03:43:16.1159|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:43:17.0787|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:43:17.1181|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:43:17.1631|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:43:17.1941|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:43:17.5382|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-07-13 03:43:17.5382|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a]
+2018-07-13 03:43:17.6613|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (43ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-07-13 03:43:17.6613|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (43ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Authors]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Authors]
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+2018-07-13 03:43:17.7360|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?', @p6='?', @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?', @p11='?', @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 50), @p15='?', @p16='?', @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (Size = 50), @p20='?', @p21='?', @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?' (Size = 50), @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29);
+2018-07-13 03:43:17.7360|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 50), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?', @p6='?', @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 50), @p10='?', @p11='?', @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 50), @p15='?', @p16='?', @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (Size = 50), @p20='?', @p21='?', @p22='?' (Size = 50), @p23='?' (Size = 50), @p24='?' (Size = 50), @p25='?', @p26='?', @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([Id], [DateOfBirth], [FirstName], [Genre], [LastName])
+VALUES (@p0, @p1, @p2, @p3, @p4),
+(@p5, @p6, @p7, @p8, @p9),
+(@p10, @p11, @p12, @p13, @p14),
+(@p15, @p16, @p17, @p18, @p19),
+(@p20, @p21, @p22, @p23, @p24),
+(@p25, @p26, @p27, @p28, @p29);
+2018-07-13 03:43:17.7742|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[@p30='?', @p31='?', @p32='?' (Size = 500), @p33='?' (Size = 100), @p34='?', @p35='?', @p36='?' (Size = 500), @p37='?' (Size = 100), @p38='?', @p39='?', @p40='?' (Size = 500), @p41='?' (Size = 100), @p42='?', @p43='?', @p44='?' (Size = 500), @p45='?' (Size = 100), @p46='?', @p47='?', @p48='?' (Size = 500), @p49='?' (Size = 100), @p50='?', @p51='?', @p52='?' (Size = 500), @p53='?' (Size = 100), @p54='?', @p55='?', @p56='?' (Size = 500), @p57='?' (Size = 100), @p58='?', @p59='?', @p60='?' (Size = 500), @p61='?' (Size = 100), @p62='?', @p63='?', @p64='?' (Size = 500), @p65='?' (Size = 100), @p66='?', @p67='?', @p68='?' (Size = 500), @p69='?' (Size = 100), @p70='?', @p71='?', @p72='?' (Size = 500), @p73='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p30, @p31, @p32, @p33),
+(@p34, @p35, @p36, @p37),
+(@p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45),
+(@p46, @p47, @p48, @p49),
+(@p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61),
+(@p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69),
+(@p70, @p71, @p72, @p73);
+2018-07-13 03:43:17.7742|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[@p30='?', @p31='?', @p32='?' (Size = 500), @p33='?' (Size = 100), @p34='?', @p35='?', @p36='?' (Size = 500), @p37='?' (Size = 100), @p38='?', @p39='?', @p40='?' (Size = 500), @p41='?' (Size = 100), @p42='?', @p43='?', @p44='?' (Size = 500), @p45='?' (Size = 100), @p46='?', @p47='?', @p48='?' (Size = 500), @p49='?' (Size = 100), @p50='?', @p51='?', @p52='?' (Size = 500), @p53='?' (Size = 100), @p54='?', @p55='?', @p56='?' (Size = 500), @p57='?' (Size = 100), @p58='?', @p59='?', @p60='?' (Size = 500), @p61='?' (Size = 100), @p62='?', @p63='?', @p64='?' (Size = 500), @p65='?' (Size = 100), @p66='?', @p67='?', @p68='?' (Size = 500), @p69='?' (Size = 100), @p70='?', @p71='?', @p72='?' (Size = 500), @p73='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Books] ([Id], [AuthorId], [Description], [Title])
+VALUES (@p30, @p31, @p32, @p33),
+(@p34, @p35, @p36, @p37),
+(@p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45),
+(@p46, @p47, @p48, @p49),
+(@p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57),
+(@p58, @p59, @p60, @p61),
+(@p62, @p63, @p64, @p65),
+(@p66, @p67, @p68, @p69),
+(@p70, @p71, @p72, @p73);
+2018-07-13 03:43:18.1948|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:43:18.1948|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:6058/  0
+2018-07-13 03:43:18.2417|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DEBUG http://localhost:6058/  0
+2018-07-13 03:43:18.2417|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:6058/  
+2018-07-13 03:43:18.2917|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 103.6075ms 200 
+2018-07-13 03:43:18.2963|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 103.6075ms 200 
+2018-07-13 03:43:18.3994|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 211.7984ms 404 
+2018-07-13 03:43:18.3994|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 211.7984ms 404 
+2018-07-13 03:43:47.6463|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:43:47.6463|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 DELETE http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167  0
+2018-07-13 03:43:47.7518|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:43:47.7518|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.0.0-rtm-26452 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2018-07-13 03:43:47.8089|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:43:47.8089|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:43:47.8494|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:43:47.8494|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2018-07-13 03:43:47.8894|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:43:47.8918|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2018-07-13 03:43:47.9143|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:43:47.9143|INFO|Microsoft.EntityFrameworkCore.Migrations|No migrations were applied. The database is already up to date.
+2018-07-13 03:43:47.9958|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:43:47.9958|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) with arguments (25320c5e-f58a-4b1f-b63a-8ee07a840bdf, 70a1f9b9-0a37-4c1a-99b1-c7709fc64167) - ModelState is Valid
+2018-07-13 03:43:48.0672|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:43:48.0672|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@__authorId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @__authorId_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2018-07-13 03:43:48.1207|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:43:48.1265|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@__authorId_0='?', @__bookId_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[AuthorId], [b].[Description], [b].[Title]
+FROM [Books] AS [b]
+WHERE ([b].[AuthorId] = @__authorId_0) AND ([b].[Id] = @__bookId_1)
+2018-07-13 03:43:48.1920|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (32ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Books]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2018-07-13 03:43:48.1920|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (32ms) [Parameters=[@p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Books]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2018-07-13 03:43:48.2196|INFO|Library.API.Controllers.BooksController|Deleted book 70a1f9b9-0a37-4c1a-99b1-c7709fc64167 for author 25320c5e-f58a-4b1f-b63a-8ee07a840bdf.
+2018-07-13 03:43:48.2196|INFO|Library.API.Controllers.BooksController|Deleted book 70a1f9b9-0a37-4c1a-99b1-c7709fc64167 for author 25320c5e-f58a-4b1f-b63a-8ee07a840bdf.
+2018-07-13 03:43:48.2490|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2018-07-13 03:43:48.2525|INFO|Microsoft.AspNetCore.Mvc.StatusCodeResult|Executing HttpStatusCodeResult, setting HTTP status code 204
+2018-07-13 03:43:48.2789|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 543.4642ms
+2018-07-13 03:43:48.2827|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action Library.API.Controllers.BooksController.DeleteBookForAuthor (Library.API) in 543.4642ms
+2018-07-13 03:43:48.2827|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 660.7304ms 204 
+2018-07-13 03:43:48.2827|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 660.7304ms 204 

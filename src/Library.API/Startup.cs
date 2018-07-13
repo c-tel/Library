@@ -12,8 +12,10 @@ using Library.API.Services;
 using Library.API.Entities;
 using Library.API.Helpers;
 using Library.API.Models;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
+using NLog.Extensions.Logging;
 
 namespace Library.API
 {
@@ -52,17 +54,28 @@ namespace Library.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, 
             ILoggerFactory loggerFactory, LibraryContext libraryContext)
-        {           
+        {       
+            loggerFactory.AddNLog();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
             else
             {
                 app.UseExceptionHandler(appBuilder =>
                 {
                     appBuilder.Run(async context =>
                     {
+                        var handler = context.Features.Get<IExceptionHandlerFeature>();
+                        if (handler != null)
+                        {
+                            var logger = loggerFactory.CreateLogger("Global exctptions logger");
+                            logger.LogError(500, 
+                                handler.Error,
+                                handler.Error.StackTrace);
+                        }
                         context.Response.StatusCode = 500;
                         await context.Response.WriteAsync("An unexpected fault happened. Try again later.");
                     });
@@ -79,6 +92,8 @@ namespace Library.API
                 cfg.CreateMap<Book, BookDTO>();
                 cfg.CreateMap<AuthorForCreationDTO, Author>();
                 cfg.CreateMap<BookForCreationDTO, Book>();
+                cfg.CreateMap<BookForUpdateDTO, Book>();
+                cfg.CreateMap<Book, BookForUpdateDTO>();
             });
 
             libraryContext.EnsureSeedDataForContext();
